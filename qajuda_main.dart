@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 150,
-                  child: Image.network('https://raw.githubusercontent.com/felipexrn/qajuda_Web/main/logoqajuda.png'),
+                  child: Image.network('https://raw.githubusercontent.com/felipexrn/DDM/main/logoqajuda.png'),
                 ),
                 SizedBox(
                   height: 50, // Espaço entre a imagem e a caixa de busca
