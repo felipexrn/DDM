@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   ]; 
   // Lista de legenda de imagens distintas
   static const List<String> lengedasImagens = [
-    'Alfabetizacao',
+    'Alfabetização',
     'Adoção',
     'Limpeza de praia',
     'Reflorestamento',
