@@ -38,7 +38,11 @@ class MyApp extends StatelessWidget {
                       SizedBox(width: 10),
                       Text(
                         'Alfabetização',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,fontFamily: 'poppins',
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
@@ -101,7 +105,8 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20), // Espaço entre botão e borda inferior da tela
+                SizedBox(
+                    height: 20), // Espaço entre botão e borda inferior da tela
               ],
             ),
           ),
