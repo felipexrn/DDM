@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
 
   // Lista de URLs de imagens distintas
   static const List<String> imageUrls = [
-    'https://raw.githubusercontent.com/felipexrn/DDM/main/alfabetizacao.jpg',
-    'https://raw.githubusercontent.com/felipexrn/DDM/main/animais.jpg',
-    'https://raw.githubusercontent.com/felipexrn/DDM/main/limpeza-praia2.jpg',
-    'https://raw.githubusercontent.com/felipexrn/DDM/main/plantacao.jpg',
-    'https://raw.githubusercontent.com/felipexrn/DDM/main/roupa.jpg',
-    'https://raw.githubusercontent.com/felipexrn/DDM/main/alfabetizacao-pcd.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/alfabetizacao.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/animais.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/limpeza-praia2.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/plantacao.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/roupa.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/alfabetizacao-pcd.jpg',
   ]; 
   // Lista de legenda de imagens distintas
   static const List<String> lengedasImagens = [
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                 SizedBox(
                   height: 150,
                   child: Image.network(
-                      'https://raw.githubusercontent.com/felipexrn/DDM/main/logoqajuda.png'),
+                      'https://raw.githubusercontent.com/felipexrn/DDM/imagens/main/logoqajuda.png'),
                 ),
                 SizedBox(
                   height: 50, // Espaço entre a imagem e a caixa de busca
