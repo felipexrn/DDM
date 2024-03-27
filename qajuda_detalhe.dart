@@ -22,8 +22,9 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Row(
+                  padding: EdgeInsets.all(5.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
                         width: 50,
@@ -39,8 +40,9 @@ class MyApp extends StatelessWidget {
                       Text(
                         'Alfabetização',
                         style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,fontFamily: 'poppins',
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'poppins',
                           color: Colors.white,
                         ),
                       ),
