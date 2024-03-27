@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // Definindo um degradê linear personalizado
+  // Degradê linear
   static const LinearGradient myGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -13,11 +13,30 @@ class MyApp extends StatelessWidget {
     stops: [0.0, 0.7],
   );
 
+  // Lista de URLs de imagens distintas
+  static const List<String> imageUrls = [
+    'https://raw.githubusercontent.com/felipexrn/DDM/main/alfabetizacao.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/main/animais.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/main/limpeza-praia2.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/main/plantacao.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/main/roupa.jpg',
+    'https://raw.githubusercontent.com/felipexrn/DDM/main/alfabetizacao-pcd.jpg',
+  ]; 
+  // Lista de legenda de imagens distintas
+  static const List<String> lengedasImagens = [
+    'Alfabetizacao',
+    'Adoção',
+    'Limpeza de praia',
+    'Reflorestamento',
+    'Bazar',
+    'Ledor',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // Usando um Container para aplicar o degradê linear como fundo
+        // Container para aplicar o degradê linear como fundo
         body: Container(
           decoration: BoxDecoration(
             gradient: myGradient,
@@ -27,11 +46,13 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  height: 20, // Espaço entre a parte superior da tela e a imagem
+                  height:
+                      20, // Espaço entre a parte superior da tela e a imagem
                 ),
                 SizedBox(
                   height: 150,
-                  child: Image.network('https://raw.githubusercontent.com/felipexrn/DDM/main/logoqajuda.png'),
+                  child: Image.network(
+                      'https://raw.githubusercontent.com/felipexrn/DDM/main/logoqajuda.png'),
                 ),
                 SizedBox(
                   height: 50, // Espaço entre a imagem e a caixa de busca
@@ -43,8 +64,10 @@ class MyApp extends StatelessWidget {
                       hintText: 'Digite sua busca...',
                       border: OutlineInputBorder(),
                       filled: true,
-                      fillColor: Colors.white, // Definindo uma cor de fundo branca para o campo de texto
-                      prefixIcon: Icon(Icons.search), // Adicionando o ícone de lupa como prefixo
+                      fillColor: Colors
+                          .white, // cor de fundo branca para o campo de texto
+                      prefixIcon:
+                          Icon(Icons.search), // ícone de lupa como prefixo
                     ),
                   ),
                 ),
@@ -53,18 +76,34 @@ class MyApp extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(20), // Espaço ao redor do GridView
+                    padding:
+                        const EdgeInsets.all(20), // Espaço ao redor do GridView
                     child: GridView.count(
                       crossAxisCount: 2,
                       children: List.generate(6, (index) {
-                        // 
                         return Card(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Icon(Icons.image),
-                              SizedBox(height: 10),
-                              Text('Item $index'),
+                              SizedBox(
+                                height: 100,
+                                child: Image.network(
+                                  // Usando index % imageUrls.length para garantir que o índice permaneça dentro dos limites da lista
+                                  imageUrls[index % imageUrls.length],
+                                  width: 100,
+                                  height: 100,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              SizedBox(height: 5),
+                              Container(
+                                child: Text(
+                                  lengedasImagens[index % lengedasImagens.length],
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         );
